@@ -19,7 +19,7 @@ function FormularioCadastro() {
 
     const cadastrarUsuario = async () => {
         try {
-            const response = await axios.post('https://repositry-deploy.onrender.com/usuarios', {nome, sexo, idade, altura, peso, posicao, numeroDaCamisa});
+            const response = await axios.post('https://back-deploy-7q2n.onrender.com/usuarios', {nome, sexo, idade, altura, peso, posicao, numeroDaCamisa});
             exibirMensagem(response.data.mensagem || 'Usuário cadastrado com sucesso!', 'sucesso');
             setNome('');
             setSexo('');
