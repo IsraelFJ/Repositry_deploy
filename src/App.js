@@ -1,7 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PaginaHome from './pages/PaginaHome';
-import PaginaCadastro from './pages/Cadastro';  // Verifique se o caminho e nome do arquivo estão corretos
-import PaginaListaUsuarios from './pages/Lista';
+import PaginaCadastro from './pages/Cadastro';
+import PaginaListaTarefas from './pages/ListaTarefas';
+import PaginaToDoList from './pages/Tarefas';  // Importando a página de tarefas
+
+
 import './App.css';
 
 function App() {
@@ -10,7 +13,8 @@ function App() {
       <Routes>
         <Route path="/" element={<PaginaHome />} />
         <Route path="/cadastro" element={<PaginaCadastro />} />
-        <Route path="/usuarios" element={<PaginaListaUsuarios />} />
+        <Route path="/usuarios" element={<PaginaListaTarefas />} />
+        <Route path="/tarefas" element={<PaginaToDoList />} /> {/* Rota para página de tarefas */}
       </Routes>
     </Router>
   );

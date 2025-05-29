@@ -1,4 +1,4 @@
-// src\components\ListaDeUsuarios\index.js
+// src\components\ListaDeTarefas\index.js
 
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -23,13 +23,13 @@ function ListaDeUsuarios() {
     return (
         <ul id="listaUsurios" className="lista-usuarios">
             {usuarios.length === 0 ? (
-                <li>Nenhuma Tarefa encontrado.</li>
+                <li>Nenhum usuário encontrado.</li>
             ) : (
                 usuarios.map( usuario => (
                     <li key={usuario.id}>
-                        <strong>Nome de Usuario: </strong> {usuario.username}<br />
-                        <strong>Nome Completo: </strong> {usuario.nomeCompleto}<br />
-                        <strong>E-Mail: </strong> {usuario.email}<br />
+                        <strong>Nome: </strong> {usuario.nome}<br />
+                        <strong>Sexo: </strong> {usuario.sexo}<br />
+                        <strong>Idade: </strong> {usuario.idade}<br />
                         <strong>Altura: </strong> {usuario.altura}<br />
                         <strong>Peso: </strong> {usuario.peso}<br />
                         <strong>Posicão: </strong> {usuario.posicao}<br />
